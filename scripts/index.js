@@ -13,20 +13,6 @@ var qaList = [
 ];
 
 
-function callQA() {
-    var question = document.getElementById("question").value;
-    var answer = document.getElementById("answer").value;
-    if (question.trim()=='' || answer.trim()== '') {
-        alert('Question or answer CANNOT be empty!');
-    } else {
-        var qaObj = loadQA(question, answer);
-        qaList.push(qaObj);
-        document.getElementById("question").value = '';
-        document.getElementById("answer").value = '';
-        document.getElementById('formMessage').innerHTML = `Data loaded to QA Array. System now holding ${qaList.length} QA objects.`;
-    }
-
-}
 
 function qRender(i){
     document.getElementById('questionArea').innerHTML = `Question: ${qaList[i].question}`;
@@ -47,17 +33,7 @@ function aRender(){
     }
 }
 
-function qaDisplay(){
-    if (qaList.length == 0) {
-        document.getElementById('questionArea').innerHTML = 'No QA data found! Please input you data.';
-    } else {
-        var i = 0
-        document.getElementById("nextQuestion").removeAttribute("hidden");
-        document.getElementById("prevQuestion").removeAttribute("hidden");;
-        document.getElementById("showAnswer").removeAttribute("hidden");
-        qRender(i);
-    }
-}
+
 
 function nextQuestion(){
     i = document.getElementById('questionArea').qIndex;
