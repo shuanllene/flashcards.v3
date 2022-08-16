@@ -12,13 +12,6 @@ var qaList = [
   },
 ];
 
-function loadQA(q, a) {
-    var obj = {
-        question: q,
-        answer: a,
-    };
-    return obj
-}
 
 function callQA() {
     var question = document.getElementById("question").value;
