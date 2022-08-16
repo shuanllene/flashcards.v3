@@ -21,6 +21,18 @@ function qRender(i){
     document.getElementById('questionArea').showAnswer = false; 
 }
 
+function qaDisplay(){
+    if (qaList.length == 0) {
+        document.getElementById('questionArea').innerHTML = 'No QA data found! Please input you data.';
+    } else {
+        var i = 0
+        document.getElementById("nextQuestion").removeAttribute("hidden");
+        document.getElementById("prevQuestion").removeAttribute("hidden");;
+        document.getElementById("showAnswer").removeAttribute("hidden");
+        qRender(i);
+    }
+}
+
 function aRender(){
     i = document.getElementById('questionArea').qIndex;
     ifShown = document.getElementById('questionArea').showAnswer
