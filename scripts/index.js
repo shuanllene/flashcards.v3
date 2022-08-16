@@ -1,4 +1,14 @@
-var qaList = [];
+var qaList = [  question: "what is 3+3?",
+    answer: 8,
+  },
+  {
+    question: "how many seasons do we have?",
+    answer: 4,
+  },
+  {
+    question: "how many days in August?",
+    answer: 31,
+  },];
 
 function loadQA(q, a) {
     var obj = {
