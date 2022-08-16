@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FlashCards</title>
+    </head>
+    <body>
+        <form onsubmit="return false;">
+            <label for="question">Question:</label><br>
+            <input type="text" id="question" name="question" value="What's you name?" required><br>
+            <label for="answer">Answer:</label><br>
+            <input type="text" id="answer" name="answer" value="Link" required><br><br>
+            <input type="submit", onclick="callQA()">
+            <p id="formMessage"></p>
+        
+        </form>
+        
+        <button onclick="qaConsole()">Print QA in console</button> <button onclick="qaDisplay()">Start QA Display</button>
+        <p id="qaInConsole"></p>
+        <p id="questionArea"></p>
+        <p id="answerArea"></p>
+        <button id="nextQuestion" onclick="nextQuestion()" hidden>Next</button> <button id="prevQuestion" onclick="prevQuestion()" hidden>Previous</button> <button id="showAnswer" onclick="aRender()" hidden>Toggle Answer</button>
+    </body>
+    
+    <script src="scripts/index.js"></script>
+</html>
+
